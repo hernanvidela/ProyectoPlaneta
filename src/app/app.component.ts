@@ -15,17 +15,23 @@ export class AppComponent {
   title = 'planetas';
 
   constructor(private router:Router){}
-    Listar(){
-      this.router.navigate(["listar"]);
-    }
-    Create(){
-      this.router.navigate(["create"]);
-          }
-    Editar(){
-      this.router.navigate(["editar"])
-    }
-    Eliminar(){
-      this.router.navigate(["eliminar"])
-    }
+   Planetas(){
+     this.router.navigate(["planetas"])
+   }
+   Estrellas(){
+     this.router.navigate(["estrellas"])
+   }
+   Listar(){
+    this.router.navigate(["listar"]);
+  }
+  Create(){
+    this.router.navigate(["create"]);
+        }
+  Editar(){
+    this.router.navigate(["editar"])
+  }
+  Eliminar(){
+    this.router.navigate(["eliminar"])
+  }
   
 }

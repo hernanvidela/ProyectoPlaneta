@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlanetasComponent } from './planetas/planetas.component';
@@ -11,6 +10,8 @@ import { EliminarComponent } from './Planetas/eliminar/eliminar.component';
 import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service'
 import {HttpClientModule} from '@angular/common/http';
+import { EstrellasComponent } from './estrellas/estrellas.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
     CreateComponent,
     EditarComponent,
     EliminarComponent,
+    EstrellasComponent
     
       ],
   imports: [
@@ -26,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+      
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

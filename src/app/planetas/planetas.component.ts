@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-planetas',
@@ -7,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
-  ngOnInit() {
-   
-    
-  }
-
+  ngOnInit() { 
+      }
+     Listar(){
+       this.router.navigate(["listar"]);
+     }
+     Create(){
+       this.router.navigate(["create"]);
+     }
 }

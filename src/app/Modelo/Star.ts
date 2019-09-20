@@ -1,7 +1,5 @@
 export class Star{
 id:number;
-name:String;
+name:string;
 density:number;
-
-
 }

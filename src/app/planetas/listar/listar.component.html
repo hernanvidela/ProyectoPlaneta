@@ -11,6 +11,7 @@
                            <th>NOMBRE</th>
                            <th>SIZE</th>
                            <th>ESTRELLA</th>
+                           <th></th>
                         </tr>
     
                    </thead>
@@ -19,11 +20,11 @@
                            <td>{{planeta.id}}</td>
                            <td>{{planeta.name}}</td>
                            <td>{{planeta.size}}</td>
-                           <td>{{planeta.estrella.name}}</td>                       
+                           <td>{{planeta.estrella}}</td>                       
                            <td>
-                            <button (click)="Editar()" class="btn btn-info">Editar</button>
-                            <button (click)="Eliminar()" class="btn btn-info" style="margin-left: 10px">Eliminar</button>
-                       </td>
+                                 <button class="btn btn-success" (click)="Editar(planeta)">Editar</button>
+                                  <button (click)="Eliminar()" class="btn btn-info" style="margin-left: 10px">Eliminar</button>
+                           </td>
                        </tr>
                    </tbody>
     

@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { ListarComponent } from './Planetas/listar/listar.component';
 import { Router } from '@angular/router';
-import { NullTemplateVisitor } from '@angular/compiler';
-import { EditarComponent } from './Planetas/editar/editar.component';
-import { EliminarComponent } from './Planetas/eliminar/eliminar.component';
-import { CreateComponent } from './Planetas/create/create.component';
+
+
 
 @Component({
   selector: 'app-root',
@@ -29,9 +26,6 @@ export class AppComponent {
         }
   Editar(){
     this.router.navigate(["editar"])
-  }
-  Eliminar(){
-    this.router.navigate(["eliminar"])
   }
   
 }

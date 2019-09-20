@@ -6,7 +6,6 @@ import { PlanetasComponent } from './planetas/planetas.component';
 import { ListarComponent } from './Planetas/listar/listar.component';
 import { CreateComponent } from './Planetas/create/create.component';
 import { EditarComponent } from './Planetas/editar/editar.component';
-import { EliminarComponent } from './Planetas/eliminar/eliminar.component';
 import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service'
 import {HttpClientModule} from '@angular/common/http';
@@ -18,8 +17,7 @@ import { EstrellasComponent } from './estrellas/estrellas.component';
     PlanetasComponent,
     ListarComponent,
     CreateComponent,
-    EditarComponent,
-    EliminarComponent,
+    EditarComponent,    
     EstrellasComponent
     
       ],

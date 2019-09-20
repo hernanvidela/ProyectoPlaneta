@@ -29,4 +29,7 @@ return this.http.post<Planet>(this.Url,planeta);
      
      return this.http.put<Planet>(this.Url+planeta.id,planeta);
    }
+   eliminarPlaneta(planeta:Planet){
+     return this.http.delete<Planet>(this.Url+planeta.id);
+   }
 }

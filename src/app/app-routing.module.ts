@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListarComponent } from './Planetas/listar/listar.component';
 import { CreateComponent } from './Planetas/create/create.component';
 import { EditarComponent } from './Planetas/editar/editar.component';
-import { EliminarComponent } from './Planetas/eliminar/eliminar.component';
 import { PlanetasComponent } from './planetas/planetas.component';
 import { EstrellasComponent } from './estrellas/estrellas.component';
 
@@ -11,8 +10,7 @@ import { EstrellasComponent } from './estrellas/estrellas.component';
 const routes: Routes = [
   {path:'listar', component:ListarComponent},
   {path:'create', component:CreateComponent},
-  {path:'editar', component:EditarComponent},
-  {path:'eliminar',component:EliminarComponent},
+  {path:'editar', component:EditarComponent},  
   {path:'planetas',component:PlanetasComponent},
   {path:'estrellas', component:EstrellasComponent}  
 ];

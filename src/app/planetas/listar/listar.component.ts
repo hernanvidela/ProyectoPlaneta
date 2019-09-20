@@ -23,6 +23,14 @@ this.planetas=data;
   Editar(planeta:Planet){
    localStorage.setItem("id",planeta.id.toString());
     this.router.navigate(["editar"]);
+      }
+  Eliminar(planeta:Planet){
+    this.service.eliminarPlaneta(planeta)
+    .subscribe(data=>{
+      this.planetas=this.planetas.filter(p=>p!==planeta);
+      alert("usuario eliminado");
+    })
+    
   }
 
 }

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card">
+      <div class= "card-Header" >
+       <h3>Modificar Estrellas</h3>
+      </div>
+      <div class="card-body">
+          <form >
+                 
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" [(ngModel)]="estrella.name" placeholder="Name" name="name" class="form-control" id="name">  
+            </div>
+            <div class="form-group">
+                  <label for="density">Density</label>
+                  <input type="number" [(ngModel)]="estrella.density" placeholder="Density" name="density" class="form-control" id="density">
+            </div>            
+            <button class="btn btn-success" (click)="Actualizar(estrella)">Actualizar</button>
+            <button  type="submit" class="btn btn-success m-3" (click)="Cancelar()" >Cancelar</button>            
+          </form>
+      </div>
+  </div>
+
+</div>
+
+    
+

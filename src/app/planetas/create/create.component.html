@@ -6,18 +6,22 @@
         <div class="card-body">
             <form >
               <div class="form-group">
-                <label for="name">name</label>
-                <input type="name" [(ngModel)]="planeta.name" placeholder="Name" name="name" class="form-control" id="name">  
+                <label for="exampleInputEmail1">name</label>
+                <input type="text" [(ngModel)]="planetDTO.name" placeholder="Name" name="name" class="form-control">  
               </div>
               <div class="form-group">
-                    <label for="size">size</label>
-                    <input type="size" [(ngModel)]="planeta.size" placeholder="Size" name="size" class="form-control" id="size">  
+                    <label for="exampleInputPassword1">size</label>
+                    <input type="number" [(ngModel)]="planetDTO.size" placeholder="Size" name="size" class="form-control">  
               </div>
               <div class="form-group">
-                    <label for="estrella">estrella</label>
-                    <input type=estrella  [(ngModel)]="planeta.estrella" placeholder="Estrella" name="estrella" class="form-control" id="estrella">  
-              </div>
-              <button class="btn btn-success" (click)="Guardar()">Create</button>             
+                <label for="exampleInputPassword1">Estrella</label>
+                <select class="custom-select " id="inputGroupSelect01" [(ngModel)]="planetDTO.estrella.id" required  name = "estrellaId" >
+                    <option [value]="estrella.id" *ngFor="let estrella of estrellas">{{estrella.name}}</option>
+                </select>   
+                </div>
+                <div class="alert alert-danger" *ngIf="errorFlag" role="alert">{{errorMessage}}</div>                        
+              <button type="submit" class="btn btn-success" (click)="Guardar()">Create</button>  
+                         <button  type="submit" class="btn btn-success m-3" (click)="Cancelar()" >Cancelar</button>
             </form>
         </div>
     </div>

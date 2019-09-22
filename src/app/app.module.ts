@@ -10,6 +10,9 @@ import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service'
 import {HttpClientModule} from '@angular/common/http';
 import { EstrellasComponent } from './estrellas/estrellas.component';
+import { ListarComponentEstrella } from './Estrellas/listar/listar.component';
+import { CreateComponentEstrella } from './Estrellas/create/create.component';
+import { EditarComponentEstrella } from './Estrellas/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,10 @@ import { EstrellasComponent } from './estrellas/estrellas.component';
     ListarComponent,
     CreateComponent,
     EditarComponent,    
-    EstrellasComponent
-    
+    EstrellasComponent,
+    ListarComponentEstrella,
+    EditarComponentEstrella,
+    CreateComponentEstrella
       ],
   imports: [
     BrowserModule,

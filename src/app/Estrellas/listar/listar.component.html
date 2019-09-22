@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class= "card-Header" >
+         <h3>Estrellas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+               <thead>
+                   <tr>
+                       <th>ID</th>
+                       <th>NOMBRE</th>
+                       <th>DENSITY</th>                       
+                       <th></th>
+                    </tr>
+
+               </thead>
+               <tbody>
+                   <tr *ngFor="let estrella of estrellas" class="text-center">
+                       <td>{{estrella.id}}</td>
+                       <td>{{estrella.name}}</td>
+                       <td>{{estrella.density}}</td>                                              
+                       <td>
+                             <button class="btn btn-success" (click)="Editar(estrella)">Editar</button>
+                              <button class="btn btn-success" (click)="Eliminar(estrella)" style="margin-left: 10px">Eliminar</button>
+                       </td>
+                   </tr>
+               </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+

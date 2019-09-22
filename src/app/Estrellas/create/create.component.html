@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card">
+        <div class= "card-Header" >
+         <h3>Agregar Estrellas</h3>
+        </div>
+        <div class="card-body">
+            <form >
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" minlength="2" [(ngModel)]="estrella.name" placeholder="Name" name="name" class="form-control" id="name">  
+              </div>
+              <div class="form-group">
+                    <label for="desnity">Density</label>
+                    <input type="number" min="0.1" [(ngModel)]="estrella.density" placeholder="Density" name="density" class="form-control" id="density">  
+              </div>              
+              <button class="btn btn-success" (click)="Guardar()">Create</button>
+              <button  type="submit" class="btn btn-success m-3" (click)="Cancelar()" >Cancelar</button>             
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+

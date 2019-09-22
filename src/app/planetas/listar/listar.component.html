@@ -10,21 +10,23 @@
                            <th>ID</th>
                            <th>NOMBRE</th>
                            <th>SIZE</th>
-                           <th>ESTRELLA</th>
+                           <th>NOMBRE ESTRELLA</th>
+                           <th>DENSITY ESTRELLA</th>
                            <th></th>
                         </tr>
     
                    </thead>
                    <tbody>
-                       <tr *ngFor="let planeta of planetas" class="text-center">
+                       <tr *ngFor="let planeta of planetas" class="text-center">                         
                            <td>{{planeta.id}}</td>
                            <td>{{planeta.name}}</td>
-                           <td>{{planeta.size}}</td>
-                           <td>{{planeta.estrella}}</td>                       
+                           <td>{{planeta.size}}</td>                          
+                            <td>{{planeta.estrella?.name}}</td> 
+                            <td>{{planeta.estrella?.density}}</td>                                                                         
                            <td>
-                                 <button class="btn btn-success" (click)="Editar(planeta)">Editar</button>
+                                 <button class="btn btn-success" (click)="Editar(planeta.id)">Editar</button>
                                   <button class="btn btn-success" (click)="Eliminar(planeta)" style="margin-left: 10px">Eliminar</button>
-                           </td>
+                          
                        </tr>
                    </tbody>
     

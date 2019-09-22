@@ -27,5 +27,14 @@ export class AppComponent {
   Editar(){
     this.router.navigate(["editar"])
   }
+  ListarS(){
+    this.router.navigate(["listarS"]);
+  }
+  CreateS(){
+    this.router.navigate(["createS"]);
+        }
+ EditarS(){
+    this.router.navigate(["editarS"])
+ }
   
 }

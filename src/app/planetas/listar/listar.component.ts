@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Planet } from '../../Modelo/Planet';
 import { Router } from '@angular/router';
 import {ServiceService} from '../../Service/service.service';
+import { Star } from '../../Modelo/Star';
 
 
 
@@ -12,23 +13,22 @@ import {ServiceService} from '../../Service/service.service';
 })
 export class ListarComponent implements OnInit {
   planetas:Planet[];
-  planeta:Planet;
+  planeta:Planet;  
   constructor(private service:ServiceService, private router:Router) { }
   ngOnInit() {
     this.service.getPlanetas()
     .subscribe(data=>{
 this.planetas=data;
-    })
+    })    
   }
-  Editar(planeta:Planet){
-   localStorage.setItem("id",planeta.id.toString());
-    this.router.navigate(["editar"]);
+  Editar(id:number){   
+       this.router.navigate(["editar/"+id]);
       }
   Eliminar(planeta:Planet){
     this.service.eliminarPlaneta(planeta)
     .subscribe(data=>{
       this.planetas=this.planetas.filter(p=>p!==planeta);
-      alert("usuario eliminado");
+      alert("planeta eliminado");
     })
     
   }
